@@ -1,0 +1,109 @@
+body {
+  color: #eee;
+  background: #121212;
+  width: max-content;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+.container {
+  margin-top: 25px;
+  font-family: "Poppins", sans-serif;
+  width: 800px;
+}
+
+h1 {
+  font-size: 48px;
+}
+p {
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+form {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.searchbar {
+  border: 1px solid whitesmoke;
+  border-radius: 4px;
+  height: 35px;
+  width: 60%;
+  margin: 0px 25px;
+  padding: 2px 40px;
+  outline: 0;
+  background: black;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.btn {
+  background: black;
+  font-weight: bolder;
+  color: whitesmoke;
+  border-radius: 8px;
+  padding: 10 40px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.followingDays {
+  font-size: 18px;
+  font-family: "Roboto Mono", monospace;
+  max-width: 1000px;
+}
+
+.row {
+  border: 1px solid whitesmoke;
+  border-radius: 6px;
+  padding: 15px 40px;
+  margin-top: 25px;
+}
+
+.fa-sun {
+  color: orange;
+  font-size: 48px;
+}
+
+.fa-cloud-rain {
+  color: rgb(1, 1, 139);
+  font-size: 28px;
+}
+
+.fa-cloud-sun {
+  color: rgba(211, 158, 44, 0.904);
+  font-size: 28px;
+}
+
+.fa-cloud {
+  color: grey;
+  font-size: 28px;
+}
+
+.fa-wind {
+  color: rgb(90, 90, 179);
+  font-size: 28px;
+}
+
+.created-by {
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+.link {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: whitesmoke;
+}
