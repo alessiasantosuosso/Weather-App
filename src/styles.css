@@ -104,12 +104,12 @@ h3 {
   color: whitesmoke;
 }
 
-.link {
+.sourceLink {
   color: whitesmoke;
   text-decoration: none;
 }
 
-.link:hover {
+.sourceLink:hover {
   cursor: pointer;
   color: whitesmoke;
 }
