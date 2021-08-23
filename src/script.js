@@ -23,15 +23,26 @@ function currentDate() {
 currentDate();
 
 function currentTemp(response) {
-  celsiusTemp = response.data.main.temp;
   let iconElement = document.querySelector("#icon");
-  let currentTemp = Math.round(celsiusTemp);
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = currentTemp;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
   );
+  celsiusTemp = response.data.main.temp;
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = Math.round(celsiusTemp);
+
+  descriptionElement = response.data.weather[0].description;
+  let description = document.querySelector("#weather-description");
+  description.innerHTML = descriptionElement;
+
+  windElement = Math.round(response.data.wind.speed);
+  let wind = document.querySelector("#wind-speed");
+  wind.innerHTML = `${windElement} mph`;
+
+  precipitationElement = Math.round(response.data.precipitation.value);
+  let precipitation = document.querySelector("#precipitation");
+  precipitation.innerHTML = `${precipitationElement}`;
 }
 
 function displayFahrenheit(event) {
