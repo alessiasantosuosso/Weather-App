@@ -23,8 +23,8 @@ function currentDate() {
 currentDate();
 function currentTemp(response) {
   let currentTemp = Math.round(response.data.main.temp);
-  let temperature = document.querySelector("p#temperature");
-  temperature.innerHTML = `${currentTemp}°C`;
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = `${currentTemp}`;
 }
 
 function changeCity(event) {

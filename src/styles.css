@@ -16,11 +16,10 @@ h1 {
   font-size: 48px;
 }
 p {
-  font-size: 24px;
+  font-size: 36px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
-
 form {
   margin-bottom: 20px;
   font-size: 20px;
@@ -29,6 +28,19 @@ h3 {
   margin-top: 10px;
   margin-bottom: 20px;
   font-size: 26px;
+}
+
+.temperature {
+  font-size: 36px;
+  font-weight: lighter;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.units {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .searchbar {
@@ -53,12 +65,6 @@ h3 {
 }
 .btn:hover {
   cursor: pointer;
-}
-
-.followingDays {
-  font-size: 18px;
-  font-family: "Roboto Mono", monospace;
-  max-width: 1000px;
 }
 
 .row {
