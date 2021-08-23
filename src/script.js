@@ -36,6 +36,12 @@ function displayFahrenheit(event) {
   temperature.innerHTML = Math.round(fahrenheitElement);
 }
 
+function displayCelsius(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = Math.round(celsiusTemp);
+}
+
 let celsiusTemp = null;
 
 function changeCity(event) {
@@ -56,3 +62,6 @@ submitCity.addEventListener("click", changeCity);
 
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsius);
