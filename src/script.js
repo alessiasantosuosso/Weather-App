@@ -22,10 +22,21 @@ function currentDate() {
 
 currentDate();
 function currentTemp(response) {
-  let currentTemp = Math.round(response.data.main.temp);
+  let currentTemp = Math.round(celsiusTemp);
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = `${currentTemp}`;
+  temperature.innerHTML = currentTemp;
+
+  celsiusTemp = response.data.main.temp;
 }
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitElement = (celsiusTemp * 9) / 5 + 32;
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = Math.round(fahrenheitElement);
+}
+
+let celsiusTemp = null;
 
 function changeCity(event) {
   event.preventDefault();
@@ -42,3 +53,6 @@ function changeCity(event) {
 
 let submitCity = document.querySelector("#submit-city");
 submitCity.addEventListener("click", changeCity);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
