@@ -48,6 +48,12 @@ h3 {
   margin-top: 6px;
 }
 
+.units .active {
+  color: #eee;
+  text-decoration: none;
+  cursor: default;
+}
+
 .searchbar {
   border: 1px solid whitesmoke;
   border-radius: 4px;

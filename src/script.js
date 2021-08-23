@@ -31,6 +31,8 @@ function currentTemp(response) {
 
 function displayFahrenheit(event) {
   event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitElement = (celsiusTemp * 9) / 5 + 32;
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = Math.round(fahrenheitElement);
@@ -38,6 +40,8 @@ function displayFahrenheit(event) {
 
 function displayCelsius(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = Math.round(celsiusTemp);
 }
