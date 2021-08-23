@@ -20,6 +20,15 @@ p {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+img {
+  display: inline-block;
+  vertical-align: top;
+  height: 100px;
+  margin-top: unset;
+  width: 100px;
+}
+
 form {
   margin-bottom: 20px;
   font-size: 20px;
@@ -28,6 +37,14 @@ h3 {
   margin-top: 10px;
   margin-bottom: 20px;
   font-size: 26px;
+}
+
+.description {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 9px;
+  padding-top: 6px;
 }
 
 .temperature {
