@@ -86,31 +86,6 @@ h3 {
   margin-top: 25px;
 }
 
-.fa-sun {
-  color: orange;
-  font-size: 48px;
-}
-
-.fa-cloud-rain {
-  color: rgb(1, 1, 139);
-  font-size: 28px;
-}
-
-.fa-cloud-sun {
-  color: rgba(211, 158, 44, 0.904);
-  font-size: 28px;
-}
-
-.fa-cloud {
-  color: grey;
-  font-size: 28px;
-}
-
-.fa-wind {
-  color: rgb(90, 90, 179);
-  font-size: 28px;
-}
-
 .created-by {
   font-size: 18px;
   color: whitesmoke;
