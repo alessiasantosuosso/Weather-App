@@ -22,18 +22,20 @@ function currentDate() {
 
 currentDate();
 
+function search(city) {
+  let apiKey = "52159f86daf1914403242452b28f1120";
+  let unit = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+  axios.get(apiUrl).then(currentTemp);
+}
+
 function changeCity(event) {
   event.preventDefault();
   let h1 = document.querySelector("#current-city");
   let searchCity = document.querySelector("#search-city");
   searchCity.value;
-  let currentCity = (h1.innerHTML = `${searchCity.value}`);
-  let city = `${currentCity}`;
-  let unit = "metric";
-  let apiKey = "52159f86daf1914403242452b28f1120";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
-
-  axios.get(apiUrl).then(currentTemp);
+  h1.innerHTML = `${searchCity.value}`;
+  search(searchCity.value);
 }
 
 function currentTemp(response) {
@@ -75,6 +77,8 @@ function displayCelsius(event) {
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = Math.round(celsiusTemp);
 }
+
+search("London");
 
 let celsiusTemp = null;
 
