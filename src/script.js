@@ -40,9 +40,9 @@ function currentTemp(response) {
   let wind = document.querySelector("#wind-speed");
   wind.innerHTML = `${windElement} mph`;
 
-  precipitationElement = Math.round(response.data.precipitation.value);
-  let precipitation = document.querySelector("#precipitation");
-  precipitation.innerHTML = `${precipitationElement}`;
+  humidityElement = Math.round(response.data.main.humidity);
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = `${humidityElement}%`;
 }
 
 function displayFahrenheit(event) {
