@@ -111,6 +111,15 @@ h3 {
   margin-top: 25px;
 }
 
+.weather-forecast {
+  text-align: center;
+  font-size: 20px;
+}
+
+.weather-forecast-temp-min {
+  opacity: 60%;
+}
+
 .created-by {
   font-size: 18px;
   color: whitesmoke;
