@@ -78,6 +78,31 @@ function displayCelsius(event) {
   temperature.innerHTML = Math.round(celsiusTemp);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row border-0">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col-2">
+        <div class="weather-forecast-date">
+          ${day}
+          </div>
+          <img src="http://openweathermap.org/img/wn/04d.png" alt="">
+          <span class="weather-forecast-temp-max">18° </span>
+            <span class="weather-forecast-temp-min">12°</span>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + ` </div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 search("London");
 
 let celsiusTemp = null;
