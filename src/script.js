@@ -54,7 +54,7 @@ function currentTemp(response) {
 
   windElement = Math.round(response.data.wind.speed);
   let wind = document.querySelector("#wind-speed");
-  wind.innerHTML = `Wind speed: ${windElement} mph`;
+  wind.innerHTML = `Wind speed: ${windElement} km/h`;
 
   humidityElement = Math.round(response.data.main.humidity);
   let humidity = document.querySelector("#humidity");
