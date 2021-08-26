@@ -59,6 +59,16 @@ function currentTemp(response) {
   humidityElement = Math.round(response.data.main.humidity);
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `Humidity: ${humidityElement}%`;
+
+  getForecast(response.data.coord);
+}
+
+function getForecast(coordinates) {
+  let apiKey = "52159f86daf1914403242452b28f1120";
+  let unit = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${unit}`;
+
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayFahrenheit(event) {
@@ -78,7 +88,8 @@ function displayCelsius(event) {
   temperature.innerHTML = Math.round(celsiusTemp);
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row border-0">`;
@@ -100,8 +111,6 @@ function displayForecast() {
   forecastHTML = forecastHTML + ` </div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-displayForecast();
 
 search("London");
 
